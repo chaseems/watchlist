@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ name }}'s Watchlist</title>
+</head>
+<body>
+    <h2>{{ name }}'s Watchlist</h2>
+    {# use length filter to get movies varable's length. #}
+    <p>{{ movies|length }} Titles</p>
+    <ul>
+        {% for movie in movies %} {# iterate movies varable #}
+    </ul>
+</body>
+</html>
