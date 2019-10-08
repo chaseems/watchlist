@@ -10,6 +10,11 @@
     <p>{{ movies|length }} Titles</p>
     <ul>
         {% for movie in movies %} {# iterate movies varable #}
+        <li>{{ movie.title }} - {{ movie.year }} </li> {# like movie['title'] #}
+        {% endfor %} {# use endfor tag for ending the for loop #}
     </ul>
+    <footer>
+        <small>&copy; 2019 <a href="http://helloflask.com/tutorial">HelloFlask</a></small>
+    </footer>
 </body>
 </html>
