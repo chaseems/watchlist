@@ -4,16 +4,22 @@
     <meta charset="utf-8">
     <title>{{ name }}'s Watchlist</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}" type="text/css">
 </head>
 <body>
     <h2>{{ name }}'s Watchlist</h2>
     {# use length filter to get movies varable's length. #}
     <p>{{ movies|length }} Titles</p>
-    <ul>
+    <ul class="movie-list">
         {% for movie in movies %} {# iterate movies varable #}
         <li>{{ movie.title }} - {{ movie.year }} </li> {# like movie['title'] #}
         {% endfor %} {# use endfor tag for ending the for loop #}
     </ul>
+    <h2>
+        <img alt="avatar" class="avatar" src="{{ url_for('static',filename='images/avatar.png') }}">
+        {{ name }}'s Watchlist
+    </h2>
+    <img alt="Walking Totoro" class="totoro" src="{{ url_for('static',filename='images/totoro.gif') }}">
     <footer>
         <small>&copy; 2019 <a href="http://helloflask.com/tutorial">HelloFlask</a></small>
     </footer>
